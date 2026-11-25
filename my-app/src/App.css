@@ -1,7 +1,8 @@
-.text {
-  color: blue;
-}
-
-h2{
-  color: aqua;
+#root {
+  width: 100%;
+  min-height: 100vh;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }

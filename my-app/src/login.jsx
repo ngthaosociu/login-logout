@@ -1,19 +1,6 @@
-import { useState } from "react";
+import "./login.css";
 
 function Login() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-
-  function handleLogin(e) {
-    e.preventDefault();
-
-    if (username === "admin" && password === "123456") {
-      alert("Login successful!");
-    } else {
-      alert("Invalid username or password!");
-    }
-  }
-
   return (
     <div className="container">
       <div className="sidebar">
@@ -42,37 +29,29 @@ function Login() {
           <div className="login-card">
             <h1>Sign in</h1>
 
-            <form onSubmit={handleLogin}>
-              <div className="form-group">
-                <label htmlFor="username">Username</label>
+            <div className="form-group">
+              <label htmlFor="username">Username</label>
 
-                <input
-                  id="username"
-                  type="text"
-                  placeholder="Enter your username"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                  required
-                />
-              </div>
+              <input
+                id="username"
+                type="text"
+                placeholder="Enter your username"
+              />
+            </div>
 
-              <div className="form-group">
-                <label htmlFor="password">Password</label>
+            <div className="form-group">
+              <label htmlFor="password">Password</label>
 
-                <input
-                  id="password"
-                  type="password"
-                  placeholder="Enter your password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  required
-                />
-              </div>
+              <input
+                id="password"
+                type="password"
+                placeholder="Enter your password"
+              />
+            </div>
 
-              <button type="submit" className="login-button">
-                Sign in
-              </button>
-            </form>
+            <button type="button" className="login-button">
+              Sign in
+            </button>
           </div>
         </div>
       </div>
